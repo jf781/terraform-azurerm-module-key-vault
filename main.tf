@@ -1,6 +1,14 @@
-# Create Key Vault
+#---------------------------------------------------------------
+# Unmanaged resources
+#---------------------------------------------------------------
+
 data "azurerm_client_config" "current" {}
 
+#---------------------------------------------------------------
+# Managed resources
+#---------------------------------------------------------------
+
+# Create Key Vault
 resource "azurerm_key_vault" "key_vault" {
   name                        = var.key_vault.name
   location                    = var.location
